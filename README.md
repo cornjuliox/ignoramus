@@ -22,4 +22,4 @@ That's one too many steps for me. I'm hoping to get it down to a single command.
 
 | Argument Name | Description | 
 |---|---|
-| LANGUAGE | specifies the name of the template to use. Valid names are any one of the names output by the `available subcommand |
+| `<language>` | specifies the name of the template to use. Valid names are any one of the names output by the `available` subcommand |
