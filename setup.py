@@ -10,4 +10,5 @@ setup(name='ignoramus',
 	install_requires=[
 		'click==6.7'
 	],
+	scripts=['ignoramus/ignoramus.py'],
 	zip_safe=False)
