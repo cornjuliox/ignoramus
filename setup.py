@@ -7,4 +7,7 @@ setup(name='ignoramus',
 	author='Enrico Jr Tuvera',
 	author_email='enricojr.tuvera@gmail.com',
 	packages=['ignoramus'],
+	install_requires=[
+		'click==6.7'
+	],
 	zip_safe=False)
