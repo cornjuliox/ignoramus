@@ -1,33 +1,25 @@
 #!/usr/bin/env python
-import requests
-import sys
+# Copyright (C) 2018, Enrico Tuvera Jr
+import click
+import templates
 
-SITE = 'https://gitignore.io'
+@click.group()
+def ignoramus():
+    pass
+
+@ignoramus.command()
+@click.option('--output', default='.gitignore', help='specify output file name, default is .gitignore')
+@click.argument('language', default='Python')
+def generate(language, output):
+    templates.generate_gitignore(language.lower(), output)
+
+@ignoramus.command()
+def available():
+    filenames = templates.generate_files()
+    available = templates.generate_lang_names(filenames)
+    # TODO: find a way to pretty print this shit
+    for x in sorted(available):
+        print(x)
 
 if __name__ == '__main__':
-    try:
-        language = sys.argv[1:]
-    except IndexError:
-        print('usage: python get_gitignore.py <PROGRAMMING_LANGUAGE>')
-        sys.exit()
-
-    url = SITE + '/dropdown/templates.json'
-    print('getting templates from {}'.format(url))
-    templates = requests.get(url).json()
-    print('languages requested: {}'.format(language))
-    print('attempting to match')
-    matches = [match for lang in language for match in templates if match['id'] == lang.lower()]
-    print('matches: {}'.format(matches))
-
-    if matches:
-        api_url = SITE + '/api/{}'.format(','.join([x['id'] for x in matches]))
-        print('sending request to: {}'.format(api_url))
-        gitignore = requests.get(api_url).text
-        with open('new_gitignore', 'w') as F:
-            F.write(gitignore)
-            print('created new_gitignore, please rename file to gitignore')
-    else:
-        print('no matches found, try another programming language or combination thereof.')
-        sys.exit()
-    
-
+    ignoramus()
