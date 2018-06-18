@@ -3,4 +3,4 @@
 
 from ignoramus import *
 
-ignoramus()
+supermain()
