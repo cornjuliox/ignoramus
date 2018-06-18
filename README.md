@@ -5,6 +5,8 @@ Normally, I'd go here -> [here](https://github.com/github/gitignore) , find the 
 
 That's one too many steps for me. I'm hoping to get it down to a single command.
 
+# Installation
+
 # Usage
 `python ignoramus.py <subcommand> <options> <arguments>` following installation.
 

@@ -3,7 +3,7 @@
 print('__name__: {}'.format(__name__))
 print('__package__: {}'.format(__package__))
 import click
-import ignoramus.templates
+import ignoramus.templates as templates
 
 @click.group()
 def supermain():
