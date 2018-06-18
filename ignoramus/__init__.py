@@ -1,1 +1,1 @@
-from ignoramus import *
+from app import supermain
