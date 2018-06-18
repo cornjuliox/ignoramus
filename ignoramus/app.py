@@ -22,6 +22,7 @@ def available():
         for x in sorted(available):
             print(x)
     else:
+        print('len(available) = {}'.format(len(available)))
         print('No templates found - installation is borked.')
 
 if __name__ == '__main__':
