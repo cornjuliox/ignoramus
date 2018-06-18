@@ -5,7 +5,6 @@ print('__package__: {}'.format(__package__))
 import click
 import ignoramus.templates
 
-
 @click.group()
 def supermain():
     pass
