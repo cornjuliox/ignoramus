@@ -13,5 +13,5 @@ setup(name='ignoramus',
 	zip_safe=False,
 	entry_points='''
 		[console_scripts]
-		ignoramus=app:supermain
+		ignoramus=ignoramus.app:supermain
 	''')
