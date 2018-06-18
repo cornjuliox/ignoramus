@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # Copyright (C) 2018, Enrico Tuvera Jr
-print('__name__: {}'.format(__name__))
-print('__package__: {}'.format(__package__))
 import click
 import ignoramus.templates as templates
 
@@ -11,7 +9,7 @@ def supermain():
 
 @supermain.command()
 @click.option('--output', default='.gitignore', help='specify output file name, default is .gitignore')
-@click.argument('language', default='Python')
+@click.argument('language')
 def generate(language, output):
     templates.generate_gitignore(language.lower(), output)
 
@@ -20,8 +18,11 @@ def available():
     filenames = templates.generate_files()
     available = templates.generate_lang_names(filenames)
     # TODO: find a way to pretty print this shit
-    for x in sorted(available):
-        print(x)
+    if available:
+        for x in sorted(available):
+            print(x)
+    else:
+        print('No templates found - installation is borked.')
 
 if __name__ == '__main__':
     supermain()
