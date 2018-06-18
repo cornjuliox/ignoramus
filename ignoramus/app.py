@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # Copyright (C) 2018, Enrico Tuvera Jr
+print('__name__: {}'.format(__name__))
+print('__package__: {}'.format(__package__))
 import click
-import templates
+import ignoramus.templates
+
 
 @click.group()
 def supermain():
