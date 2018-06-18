@@ -4,16 +4,16 @@ import click
 import templates
 
 @click.group()
-def ignoramus():
+def supermain():
     pass
 
-@ignoramus.command()
+@supermain.command()
 @click.option('--output', default='.gitignore', help='specify output file name, default is .gitignore')
 @click.argument('language', default='Python')
 def generate(language, output):
     templates.generate_gitignore(language.lower(), output)
 
-@ignoramus.command()
+@supermain.command()
 def available():
     filenames = templates.generate_files()
     available = templates.generate_lang_names(filenames)
