@@ -6,17 +6,20 @@ Normally, I'd go here -> [here](https://github.com/github/gitignore) , find the 
 That's one too many steps for me. I'm hoping to get it down to a single command.
 
 # Installation
+For now, you'll have to pull it straight from this repo like so:
+
+`pip install git+git://github.com/cornjuliox/flask-desktop.git`
 
 # Usage
 `python ignoramus.py <subcommand> <options> <arguments>` following installation.
 
 ## Subcommands:
-### `available`
-`python ignoramus.py available` - lists all available language templates
-`python ignoramus.py --help OR python ignoramus.py <subcommand> --help` - shows help message, either for the program or the subcommand.
+`ignoramus --help OR python ignoramus.py <subcommand> --help` - shows help message, either for the program or the subcommand.
 
+### `available`
+`ignoramus available` - lists all available language templates
 ### `generate`
-`python ignoramus.py generate --output=foobar <language>`- Generates a .gitignore file based on the programming language specified.
+`ignoramus generate --output=foobar <language>`- Generates a .gitignore file based on the programming language specified.
 
 | Option Name | Description | Default | 
 |---|---|---|
