@@ -8,7 +8,7 @@ That's one too many steps for me. I'm hoping to get it down to a single command.
 # Installation
 For now, you'll have to pull it straight from this repo like so:
 
-`pip install git+git://github.com/cornjuliox/flask-desktop.git`
+`pip install git+git://github.com/cornjuliox/ignoramus.git`
 
 # Usage
 `python ignoramus.py <subcommand> <options> <arguments>` following installation.
