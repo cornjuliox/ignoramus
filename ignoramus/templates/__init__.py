@@ -2,6 +2,7 @@
 
 import os
 import os.path
+import click
 
 def generate_filepath(lang):
     table = generate_table()

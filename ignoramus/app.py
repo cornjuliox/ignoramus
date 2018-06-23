@@ -28,10 +28,11 @@ def available():
         click.echo('len(available) = {}'.format(len(available)))
         click.echo('No templates found - installation is borked.')
 
-@supermain.command()
-@click.argument('languages', nargs=-1)
-def combine(languages):
-    pass
+# @supermain.command()
+# @click.argument('languages', nargs=-1)
+# def combine(languages):
+#     click.echo
+#     pass
 
 if __name__ == '__main__':
     supermain()
