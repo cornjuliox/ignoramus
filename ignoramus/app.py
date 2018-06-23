@@ -30,8 +30,8 @@ def available():
 
 @supermain.command()
 @click.argument('languages', nargs=-1)
-def combine(languages)
-
+def combine(languages):
+    pass
 
 if __name__ == '__main__':
     supermain()
